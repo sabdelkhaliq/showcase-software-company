@@ -1,5 +1,6 @@
 package service;
 
+import exceptions.BusinessException;
 import model.Employee;
 
 import java.util.HashMap;
@@ -10,7 +11,6 @@ import static java.util.stream.Collectors.*;
 
 public class EmployeeService {
     private Map<Integer, Employee> employees;
-    private static int numberOfEmployees;
 
     private static class EmployeeServiceSingleton {
         private static final EmployeeService INSTANCE = new EmployeeService();
@@ -21,30 +21,62 @@ public class EmployeeService {
     }
 
     private EmployeeService() {
-        employees = new HashMap<Integer, Employee>();
+        employees = new HashMap<>();
     }
 
     public void createEmployee(Employee employee) {
-        int employeeKey = numberOfEmployees + 1;
-        employees.put(employeeKey, employee);
+        validateEmployeeNotNull(employee);
+        validateEmployeeIdNotRepeated(employee.getId());
+        if (employee.getDepartmentId() != null)
+            DepartmentService.getInstance().validateDepartmentIdFound(employee.getDepartmentId());
+
+        employees.put(employee.getId(), employee);
     }
 
     public void updateEmployee(Employee employee) {
-        int employeeKey = employee.getId();
-        if (employees.containsKey(employeeKey)) {
-            employees.put(employeeKey, employee);
-        }
+        validateEmployeeNotNull(employee);
+        int employeeId = employee.getId();
+        validateEmployeeIdFound(employeeId);
+        if (employee.getDepartmentId() != null)
+            DepartmentService.getInstance().validateDepartmentIdFound(employee.getDepartmentId());
+        employees.put(employeeId, employee);
     }
 
     public void assignToDepartment(int employeeId, int departmentId) {
-        if (employees.containsKey(employeeId)) {
-            Employee employee = employees.get(employeeId);
-            employee.setDepatmentId(departmentId);
-            employees.put(employeeId, employee);
+        validateEmployeeIdFound(employeeId);
+        DepartmentService.getInstance().validateDepartmentIdFound(departmentId);
+
+        Employee employee = employees.get(employeeId);
+        employee.setDepartmentId(departmentId);
+        employees.put(employeeId, employee);
+    }
+
+    public List<Employee> getAllEmployees() {
+        return employees.values().stream().collect(toList());
+    }
+
+    private void validateEmployeeNotNull(Employee employee) {
+        if (employee == null)
+            throw new BusinessException("Employee should not be null");
+    }
+
+    private void validateEmployeeIdNotRepeated(int employeeId) {
+        boolean employeeIdRepeated = employees.values().stream().anyMatch(e -> e.getId() == employeeId);
+        if (employeeIdRepeated) {
+            throw new BusinessException("Employee id is repeated");
         }
     }
 
-    public List<Employee> getAllEmployees(final int departmentId) {
-        return employees.entrySet().stream().filter(e -> e.getValue().getDepatmentId() == departmentId).map(e -> e.getValue()).collect(toList());
+    private void validateEmployeeIdFound(int employeeId) {
+        if (!employees.containsKey(employeeId))
+            throw new BusinessException("Department id wasn't found");
+    }
+
+    public Map<Integer, Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(Map<Integer, Employee> employees) {
+        this.employees = employees;
     }
 }

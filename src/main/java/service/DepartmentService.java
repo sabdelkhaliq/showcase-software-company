@@ -1,6 +1,6 @@
 package service;
 
-import Exceptions.BusinessException;
+import exceptions.BusinessException;
 import model.Department;
 
 import java.util.HashMap;
@@ -18,7 +18,7 @@ public class DepartmentService {
     }
 
     private DepartmentService() {
-        departments = new HashMap<Integer, Department>();
+        departments = new HashMap<>();
     }
 
     public void createDepartment(Department department) throws BusinessException {
@@ -42,13 +42,13 @@ public class DepartmentService {
     }
 
     private void validateDepartmentIdNotRepeated(int departmentId) {
-        boolean departmentIdRepeated = departments.entrySet().stream().filter(e -> e.getValue().getId() == departmentId).findFirst().isPresent();
+        boolean departmentIdRepeated = departments.values().stream().anyMatch(e -> e.getId() == departmentId);
         if (departmentIdRepeated) {
             throw new BusinessException("Department id is repeated");
         }
     }
 
-    private void validateDepartmentIdFound(int departmentId) {
+    public void validateDepartmentIdFound(int departmentId) {
         if (!departments.containsKey(departmentId))
             throw new BusinessException("Department id wasn't found");
     }
@@ -57,5 +57,7 @@ public class DepartmentService {
         return departments;
     }
 
-
+    public void setDepartments(Map<Integer, Department> departments) {
+        this.departments = departments;
+    }
 }

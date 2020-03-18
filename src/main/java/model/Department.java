@@ -5,8 +5,7 @@ import lombok.*;
 @EqualsAndHashCode
 public class Department {
     @Getter
-    @Setter
-    private int id;
+    private Integer id;
     @Getter
     @Setter
     private String name;

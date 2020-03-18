@@ -5,12 +5,11 @@ import lombok.*;
 @EqualsAndHashCode
 public class Employee {
     @Getter
-    @Setter
-    private int id;
+    private Integer id;
     @Getter
     @Setter
     private String name;
     @Getter
     @Setter
-    private int depatmentId;
+    private Integer departmentId;
 }

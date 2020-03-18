@@ -1,12 +1,21 @@
 package service;
 
-import Exceptions.BusinessException;
+import exceptions.BusinessException;
 import model.Department;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.HashMap;
 
 import static org.junit.Assert.*;
 
 public class DepartmentServiceTest {
+
+    @Before
+    public void setup()
+    {
+        DepartmentService.getInstance().setDepartments(new HashMap<>());
+    }
 
     //--------- Create Department Test
     @Test
@@ -18,8 +27,7 @@ public class DepartmentServiceTest {
 
     @Test(expected = BusinessException.class)
     public void createNullDepartmentTest() {
-        Department nullDepartment = null;
-        DepartmentService.getInstance().createDepartment(nullDepartment);
+        DepartmentService.getInstance().createDepartment(null);
     }
 
     @Test(expected = BusinessException.class)
@@ -42,8 +50,7 @@ public class DepartmentServiceTest {
 
     @Test(expected = BusinessException.class)
     public void updateNullDepartmentTest() {
-        Department nullDepartment = null;
-        DepartmentService.getInstance().updateDepartment(nullDepartment);
+        DepartmentService.getInstance().updateDepartment(null);
     }
 
     @Test(expected = BusinessException.class)
