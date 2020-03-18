@@ -67,7 +67,7 @@ public class EmployeeService {
         }
     }
 
-    private void validateEmployeeIdFound(int employeeId) {
+    public void validateEmployeeIdFound(int employeeId) {
         if (!employees.containsKey(employeeId))
             throw new BusinessException("Department id wasn't found");
     }

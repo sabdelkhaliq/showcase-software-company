@@ -49,7 +49,7 @@ public class DepartmentServiceTest {
     }
 
     @Test(expected = BusinessException.class)
-    public void updateNullDepartmentTest() {
+    public void updateNullDepartmentTest() {//this test is redundant
         DepartmentService.getInstance().updateDepartment(null);
     }
 

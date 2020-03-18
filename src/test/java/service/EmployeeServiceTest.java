@@ -59,7 +59,7 @@ public class EmployeeServiceTest {
         assertEquals(new Employee(4, "Ahmed", null), EmployeeService.getInstance().getEmployees().get(4));
     }
 
-    @Test(expected = BusinessException.class)
+    @Test(expected = BusinessException.class)//this test is redundant
     public void updateNullEmployeeTest() {
         EmployeeService.getInstance().updateEmployee(null);
     }
