@@ -3,22 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="300757be-0e9e-44a4-9c32-baafebd7bd82" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/BusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/BusinessException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/DepartmentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/DepartmentServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/EmployeeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/EmployeeServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exceptions/BusinessException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exceptions/BusinessException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Department.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/DepartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ui/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/DepartmentServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/DepartmentServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/EmployeeServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/EmployeeServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +12,7 @@
   <component name="CoverageViewManager">
     <option name="myAutoScrollToSource" value="true" />
     <option name="myAutoScrollFromSource" value="true" />
-    <option name="myElementSize" value="101" />
+    <option name="myElementSize" value="229" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -206,22 +190,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="94" y="94" width="1519" height="732" key="DiffContextDialog/0.0.1707.920@0.0.1707.920" timestamp="1584557760938" />
-    <state width="1664" height="242" key="GridCell.Tab.0.bottom" timestamp="1584562057087">
+    <state width="1664" height="242" key="GridCell.Tab.0.bottom" timestamp="1584562210090">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1664" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1584562057087" />
-    <state width="1664" height="242" key="GridCell.Tab.0.center" timestamp="1584562057087">
+    <state width="1664" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1584562210090" />
+    <state width="1664" height="242" key="GridCell.Tab.0.center" timestamp="1584562210090">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1664" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1584562057087" />
-    <state width="1664" height="242" key="GridCell.Tab.0.left" timestamp="1584562057087">
+    <state width="1664" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1584562210090" />
+    <state width="1664" height="242" key="GridCell.Tab.0.left" timestamp="1584562210090">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1664" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1584562057087" />
-    <state width="1664" height="242" key="GridCell.Tab.0.right" timestamp="1584562057087">
+    <state width="1664" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1584562210090" />
+    <state width="1664" height="242" key="GridCell.Tab.0.right" timestamp="1584562210090">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1664" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1584562057087" />
+    <state width="1664" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1584562210090" />
     <state width="1664" height="300" key="GridCell.Tab.1.bottom" timestamp="1584561983733">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -278,6 +262,6 @@
     <SUITE FILE_PATH="coverage/showcase_software_company$DepartmentServiceTest.ic" NAME="DepartmentServiceTest Coverage Results" MODIFIED="1584558784180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/showcase_software_company$DepartmentServiceTest_and_1_more.ic" NAME="DepartmentServiceTest and 1 more Coverage Results" MODIFIED="1584561983696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/showcase_software_company$DepartmentServiceTest_and_1_more.ic" NAME="DepartmentServiceTest and 1 more Coverage Results" MODIFIED="1584562210040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
