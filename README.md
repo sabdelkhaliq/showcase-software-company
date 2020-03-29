@@ -1,4 +1,4 @@
-# Software Company
+# Software Company Showcase
 
 ## Description
 
